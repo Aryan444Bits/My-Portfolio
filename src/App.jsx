@@ -31,6 +31,7 @@ function App() {
             <a href="mailto:baranwalaryan33@gmail.com">Email</a>
             <a href="https://github.com/aryan444bits" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/aryan-baranwal-12a1b8301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="/FAANGPath_Simple_Template.pdf" download="Aryan_Baranwal_Resume.pdf" className="download-btn">Resume</a>
           </div>
         </div>
       </section>
