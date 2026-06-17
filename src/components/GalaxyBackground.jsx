@@ -1,22 +1,21 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const GalaxyBackground = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
+    const currentMount = mountRef.current;
+    if (!currentMount) return;
+
     // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    
+
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    mountRef.current.appendChild(renderer.domElement);
+    currentMount.appendChild(renderer.domElement);
 
     camera.position.z = 3;
 
@@ -25,8 +24,8 @@ const GalaxyBackground = () => {
      */
     const isMobile = window.innerWidth < 768;
     const parameters = {
-      count: isMobile ? 50000 : 100000, // Reduce count on mobile for performance
-      size: isMobile ? 0.015 : 0.01,   // Larger particles on smaller screens
+      count: isMobile ? 30000 : 60000, // Optimized count for smooth frame-rate rendering
+      size: isMobile ? 0.015 : 0.008,   // Tailored particle size for visual density
       radius: 5,
       branches: 3,
       spin: 1,
@@ -99,73 +98,32 @@ const GalaxyBackground = () => {
 
     generateGalaxy();
 
-    // Initial state for expansion effect - adjusted to be less compressed
-    points.scale.set(0.6, 0.6, 0.6);
+    // Initial state of the galaxy scale and tilt
+    points.scale.set(1, 1, 1);
     points.rotation.x = Math.PI * 0.1;
 
     /**
      * Animation and Scroll Integration
      */
     const clock = new THREE.Clock();
+    let animationFrameId;
 
     const animate = () => {
-      const elapsedTime = clock.getElapsedTime();
+      const delta = clock.getDelta();
+      const time = clock.getElapsedTime();
 
-      // Constant slow rotation background - clockwise
-      points.rotation.y -= 0.001;
+      // Continuous time-delta slow rotation for buttery smooth movement (speed adjusted for visibility)
+      points.rotation.y -= delta * 0.12;
+
+      // Gentle floating sway on X and Z axes for subtle 3D realism
+      points.rotation.x = Math.PI * 0.1 + Math.sin(time * 0.12) * 0.04;
+      points.rotation.z = Math.cos(time * 0.08) * 0.02;
 
       renderer.render(scene, camera);
-      window.requestAnimationFrame(animate);
+      animationFrameId = window.requestAnimationFrame(animate);
     };
 
     animate();
-
-    // GSAP Scroll Animations - Expansion Effect
-    gsap.to(points.scale, {
-      x: 1.5,
-      y: 1.5,
-      z: 1.5,
-      ease: "none",
-      scrollTrigger: {
-        trigger: 'body',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 1.5, // Increased scrub for smoother follow
-      }
-    });
-
-    gsap.to(points.rotation, {
-      x: Math.PI * 0.4,
-      y: "-=6.28", // Full 360 degree rotation
-      ease: "none",
-      scrollTrigger: {
-        trigger: 'body',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 2, // Smooth interpolation
-      }
-    });
-
-    gsap.to(camera.position, {
-      z: 6,
-      scrollTrigger: {
-        trigger: 'body',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 1,
-      }
-    });
-
-    // Background color transition
-    gsap.to('body', {
-      backgroundColor: '#05051a',
-      scrollTrigger: {
-        trigger: '#about',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
-      }
-    });
 
     // Handle resize
     const handleResize = () => {
@@ -177,26 +135,29 @@ const GalaxyBackground = () => {
     window.addEventListener('resize', handleResize);
 
     return () => {
+      window.cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', handleResize);
-      mountRef.current?.removeChild(renderer.domElement);
-      geometry.dispose();
-      material.dispose();
+      if (currentMount && renderer.domElement.parentNode === currentMount) {
+        currentMount.removeChild(renderer.domElement);
+      }
+      if (geometry) geometry.dispose();
+      if (material) material.dispose();
     };
   }, []);
 
   return (
-    <div 
-      ref={mountRef} 
-      style={{ 
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        width: '100vw', 
-        height: '100vh', 
-        zIndex: 0, 
+    <div
+      ref={mountRef}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        zIndex: 0,
         backgroundColor: '#000000',
-        pointerEvents: 'none' 
-      }} 
+        pointerEvents: 'none'
+      }}
     />
   );
 };
