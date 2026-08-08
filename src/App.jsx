@@ -3,6 +3,7 @@ import Typewriter from 'typewriter-effect';
 import './App.css';
 import GalaxyBackground from './components/GalaxyBackground';
 import Navbar from './components/Navbar';
+import AIChatBot from './components/AIChatBot';
 
 const SKILLS_DATA = {
   languages: {
@@ -12,17 +13,17 @@ const SKILLS_DATA = {
       {
         name: "Java",
         level: 5,
-        levelText: "Advanced / System Core",
-        desc: "Object-Oriented programming, memory management, multi-threading, Collections, and algorithmic performance optimization.",
-        projects: ["B.Tech Systems", "Data Structures & Algorithms"],
-        details: "Strong foundations in garbage collection tuning, memory hierarchy, concurrency primitives, and design patterns."
+        levelText: "Advanced / Core Systems",
+        desc: "Core Java, OOP principles, multi-threading, Servlet, JSP, JDBC, Spring Boot, Collections, and algorithmic performance.",
+        projects: ["Grass Tech Intern", "Data Structures & Algorithms"],
+        details: "Strong foundations in memory hierarchy, concurrency primitives, MVC architecture, and design patterns."
       },
       {
         name: "JavaScript (ES6+)",
         level: 5,
         levelText: "Advanced",
         desc: "Event-loop, asynchronous runtime patterns, DOM API architecture, closures, promises, and functional program flow.",
-        projects: ["Moody Music Player", "AI Chat Bot", "Zorvyn-Assignment"],
+        projects: ["NOVA Voice Controller", "AI Chat Bot", "Moody Music Player"],
         details: "Proficient in performance-sensitive frontend execution, async workflows, and modules."
       },
       {
@@ -30,7 +31,7 @@ const SKILLS_DATA = {
         level: 4,
         levelText: "Proficient",
         desc: "Relational database queries, complex JOIN operations, query indexing, constraints, and data isolation levels.",
-        projects: ["Backend-Journey"],
+        projects: ["Grass Tech Java Apps", "Backend-Journey"],
         details: "Designing queries for data integrity and optimized execution paths in analytical scenarios."
       },
       {
@@ -52,7 +53,7 @@ const SKILLS_DATA = {
         level: 5,
         levelText: "Advanced",
         desc: "Hooks, Context API, component reconciliation lifecycle, state management, and Virtual DOM rendering optimization.",
-        projects: ["Moody Music Player", "AI Chat Bot", "Crop Advisory & Yield Prediction"],
+        projects: ["AI Chat Bot (RAG)", "Moody Music Player", "Crop Advisory"],
         details: "Developing decoupled components, managing complex global state, and debugging render bottlenecks."
       },
       {
@@ -60,24 +61,24 @@ const SKILLS_DATA = {
         level: 5,
         levelText: "Advanced",
         desc: "Utility-first design composition, layout scaling systems, custom theme configuration, and responsive interfaces.",
-        projects: ["Moody Music Player"],
+        projects: ["Moody Music Player", "NOVA Voice Controller"],
         details: "Crafting modern, bespoke user interfaces rapidly while keeping production bundle sizes minimal."
       },
       {
-        name: "Bootstrap",
+        name: "Bootstrap & Responsive Web",
         level: 4,
         levelText: "Proficient",
-        desc: "Responsive grids, UI component blueprints, styling overrides, and interactive widgets.",
+        desc: "Responsive grids, UI component blueprints, styling overrides, DOM manipulation, and cross-browser alignment.",
         projects: ["Crop Advisory & Yield Prediction"],
         details: "Building responsive grids for hackathon dashboards and customized enterprise layouts."
       },
       {
-        name: "Vite",
+        name: "Axios & WebSockets",
         level: 5,
         levelText: "Advanced",
-        desc: "Native ESM-based dev server, Hot Module Replacement (HMR), asset management, and Rollup build pipeline.",
-        projects: ["My Portfolio", "Moody Music Player"],
-        details: "Optimizing development startup speeds and configuring builds for highly responsive client performance."
+        desc: "Asynchronous HTTP clients, WebSocket real-time communication, error interceptors, and sub-second data streaming.",
+        projects: ["NOVA AI Controller", "AI Chat Bot"],
+        details: "Real-time socket streams and structured REST API data fetching across client applications."
       }
     ]
   },
@@ -90,32 +91,32 @@ const SKILLS_DATA = {
         level: 5,
         levelText: "Advanced",
         desc: "Asynchronous I/O routing, middleware execution pipelines, error handling, and modular app structures.",
-        projects: ["Zorvyn-Assignment", "Moody Music Player", "IBM PBEL E-Commerce"],
+        projects: ["NOVA Voice Assistant", "Moody Music Player", "IBM PBEL E-Commerce"],
         details: "Handling event loops, scalable microservice communication, and secure request validation."
       },
       {
-        name: "Redis Caching",
+        name: "Spring Boot & Java Backend",
+        level: 5,
+        levelText: "Advanced",
+        desc: "Spring Boot framework, Servlet, JSP, JDBC, MVC architecture, OOP principles, and enterprise Java backend modules.",
+        projects: ["Grass Tech Technology Intern"],
+        details: "Built 4 full-stack Java projects implementing 10+ CRUD modules and clean OOP structures."
+      },
+      {
+        name: "Redis Caching & Load Balancer",
         level: 4,
         levelText: "Proficient",
-        desc: "In-memory key-value caching, performance tuning, data invalidation, and reducing primary DB stress.",
-        projects: ["IBM PBEL E-Commerce"],
+        desc: "In-memory key-value caching, performance tuning, data invalidation, load balancing, and reducing primary DB stress.",
+        projects: ["IBM PBEL E-Commerce", "Moody Music Player"],
         details: "Spearheaded query load reductions of 60% and API response speed boosts of 40% during IBM internship."
       },
       {
-        name: "JWT & OAuth",
+        name: "JWT, OAuth & Microservices",
         level: 5,
         levelText: "Advanced",
-        desc: "Stateless security authorization, signature validations, token expiration policies, and middleware guard rails.",
-        projects: ["Zorvyn-Assignment", "IBM PBEL E-Commerce"],
+        desc: "Stateless security authorization, microservices architecture, signature validations, and bearer token guard rails.",
+        projects: ["IBM PBEL E-Commerce", "Backend-Journey"],
         details: "Enforcing role-based access controls and cookie/header bearer token storage strategies."
-      },
-      {
-        name: "REST APIs",
-        level: 5,
-        levelText: "Advanced",
-        desc: "HTTP method verbs, clean path structures, response formatting, status codes, and input schemas validation.",
-        projects: ["Zorvyn-Assignment", "Backend-Journey", "AI Chat Bot"],
-        details: "Designing consistent, clean, and self-documenting endpoints for high-throughput client consumption."
       }
     ]
   },
@@ -124,66 +125,66 @@ const SKILLS_DATA = {
     description: "Non-relational schemas, relational mapping, data integrity schemas, and collection indexing strategies.",
     items: [
       {
-        name: "MongoDB",
+        name: "MongoDB & CouchDB",
         level: 5,
         levelText: "Advanced",
-        desc: "Document modeling, schema validation, aggregation pipelines, complex indexing, and Mongoose ORM.",
-        projects: ["Zorvyn-Assignment", "Moody Music Player", "IBM PBEL E-Commerce"],
+        desc: "Document modeling, schema validation, aggregation pipelines, complex indexing, Mongoose ORM, and CouchDB.",
+        projects: ["IBM PBEL E-Commerce", "Moody Music Player"],
         details: "Formulating queries, modeling relationships without SQL, and fine-tuning aggregation performance."
       },
       {
-        name: "MySQL",
+        name: "MySQL & Relational DBs",
         level: 4,
         levelText: "Proficient",
-        desc: "Schema normalizing (3NF), relational references, relational database isolation levels, and views.",
-        projects: ["Backend-Journey"],
+        desc: "Schema normalizing (3NF), relational references, JDBC integration, transaction rollbacks, and views.",
+        projects: ["Grass Tech Java Projects", "Backend-Journey"],
         details: "Drafting scalable structures, table relationships, and optimizing transaction rollbacks."
       },
       {
-        name: "Database Design",
+        name: "Pinecone (Vector Database)",
         level: 4,
         levelText: "Proficient",
-        desc: "Entity-Relationship Diagrams (ERDs), normal forms, performance optimization, and storage sizing.",
-        projects: ["IBM PBEL E-Commerce", "Backend-Journey"],
-        details: "Designing clean data schemas that support scaling and high availability requirements."
+        desc: "Vector embeddings, similarity search, RAG contextual retrieval, and high-dimensional index management.",
+        projects: ["AI Chat Bot (RAG Platform)"],
+        details: "Storing and querying dense vector representations for retrieval-augmented LLM generation."
       }
     ]
   },
   tools: {
-    title: "Operations & Tools",
-    description: "Version controls, containerized deployment systems, testing tools, and command-line execution platforms.",
+    title: "AI Tools & Operations",
+    description: "Version controls, AI/ML orchestration tools, deployment platforms, and developer IDEs.",
     items: [
       {
-        name: "Git & GitHub",
+        name: "LangChain, RAG & Vector Embeddings",
         level: 5,
         levelText: "Advanced",
-        desc: "Version tracking, branch structures, resolving merge conflicts, PR code reviews, and remote syncing.",
-        projects: ["All Repositories"],
-        details: "Structuring clean commits, working with collaborative workflows, and release tag management."
+        desc: "LangChain framework, RAG pipelines, OpenRouter API, Ollama, vector embeddings, and MCP Server.",
+        projects: ["NOVA Voice Controller", "AI Chat Bot"],
+        details: "Building autonomous voice assistants and RAG-powered conversational AI platforms."
       },
       {
-        name: "Docker & Kubernetes",
-        level: 4,
-        levelText: "Proficient / Familiar",
-        desc: "Container image builds, volume mapping, multi-container orchestration with Compose, and pods scaling.",
-        projects: ["IBM PBEL E-Commerce"],
-        details: "Containerizing backend environments to standardize runtime execution across environments."
-      },
-      {
-        name: "Postman",
+        name: "Cloud & Deployment (Vercel/Render/Netlify)",
         level: 5,
         levelText: "Advanced",
-        desc: "API collections testing, request variables, script hooks, and integration assertions checking.",
-        projects: ["Zorvyn-Assignment", "Backend-Journey"],
-        details: "Creating comprehensive integration testing suites to validate server routes and response payloads."
+        desc: "PaaS cloud deployment pipelines, environment configuration, automated CI/CD builds, and domain mapping.",
+        projects: ["All Portfolio Web Projects"],
+        details: "Deploying full-stack web applications and microservice backends on Render, Vercel, and Netlify."
       },
       {
-        name: "Linux",
-        level: 4,
-        levelText: "Proficient",
-        desc: "Unix file hierarchy, terminal navigation, shell utilities, permissions management, and server logs inspection.",
-        projects: ["All Backend Deployments"],
-        details: "Configuring cloud server ports, managing files, and checking service runtimes."
+        name: "Git & GitHub (25+ Repos)",
+        level: 5,
+        levelText: "Advanced",
+        desc: "Version tracking, branch structures, resolving merge conflicts, PR code reviews, and remote syncing across 25+ repos.",
+        projects: ["25+ GitHub Repositories"],
+        details: "Structuring clean commits, working with collaborative workflows, and open-source project maintenance."
+      },
+      {
+        name: "Developer Tools (Postman, IntelliJ, VS Code)",
+        level: 5,
+        levelText: "Advanced",
+        desc: "Postman API collections, IntelliJ IDEA, Eclipse, Spring Initializr, VS Code, and NPM tooling.",
+        projects: ["All Systems Engineering"],
+        details: "Configuring Java/Node development environments and creating integration API testing suites."
       }
     ]
   }
@@ -239,31 +240,40 @@ const CATEGORIES = [
 
 const CERTIFICATIONS_DATA = [
   {
+    title: "GFG Campus Ambassador",
+    issuer: "GeeksforGeeks",
+    date: "2026",
+    credentialUrl: "https://drive.google.com/file/d/1-qZLr5NOyPEk2GTjA91QlGKM1pubXT9n/view?usp=drive_link",
+    description: "Represented GeeksforGeeks as Campus Ambassador at BBDNIIT. Organized 10+ workshops, training 200+ students in web development and algorithms.",
+    badge: "Leadership",
+    skills: ["Web Dev", "Community Leadership", "Workshops", "Mentorship"]
+  },
+  {
+    title: "Golden Batch in DSA Solving",
+    issuer: "HackerRank",
+    date: "2025",
+    credentialUrl: "https://drive.google.com/file/d/1IlNtBX3IIZF-oOcsNSYSvfFejmOQABDA/view?usp=drive_link",
+    description: "Excellence certification award earned for consistent top performance in Data Structures and Algorithms challenges.",
+    badge: "DSA Core",
+    skills: ["Java", "Data Structures", "Algorithms", "Optimization"]
+  },
+  {
     title: "Full Stack Development Intern",
     issuer: "IBM PBEL",
     date: "2026",
     credentialUrl: "https://drive.google.com/file/d/1-qZLr5NOyPEk2GTjA91QlGKM1pubXT9n/view?usp=drive_link",
     description: "Hands-on internship experience designing microservices, configuring Redis cache architectures, and integrating Razorpay payment gateways.",
-    badge: "Internship",
+    badge: "Internship 1",
     skills: ["MERN Stack", "Redis", "Razorpay", "Microservices"]
   },
   {
-    title: "Full Stack Development Intern",
-    issuer: "CodeTech IT Solutions",
-    date: "2025",
+    title: "Full Stack Java Developer Intern",
+    issuer: "Grass Tech Technology",
+    date: "2026",
     credentialUrl: "https://drive.google.com/file/d/1BAjy7xXIMzB4yqxDf_lVBtZEI4AWSvEL/view?usp=drive_link",
-    description: "Architected, coded, and deployed modular client interfaces using React.js, Express servers, Node runtimes, and relational database systems.",
-    badge: "Internship",
-    skills: ["React.js", "Node.js", "Express.js", "MySQL"]
-  },
-  {
-    title: "Full Stack Development Certification",
-    issuer: "Coding Platform",
-    date: "2025",
-    credentialUrl: "https://drive.google.com/file/d/13WxcpK5xfkVAusAyGAgCAMe829sK4JGv/view?usp=drive_link",
-    description: "Accredited validation for building responsive web designs, REST APIs, database schemas, asynchronous workflows, and version controls.",
-    badge: "Full Stack",
-    skills: ["MERN Stack", "REST APIs", "Git", "CSS Grid"]
+    description: "Built 4 full-stack Java projects using Core Java, Servlet, JSP, JDBC, Spring Boot, and MySQL, implementing 10+ CRUD modules.",
+    badge: "Internship 2",
+    skills: ["Core Java", "Spring Boot", "Servlet/JSP", "MySQL", "MVC"]
   },
   {
     title: "Full Stack Web Development Bootcamp",
@@ -273,15 +283,6 @@ const CERTIFICATIONS_DATA = [
     description: "Intensive live engineering bootcamp covering component state lifecycle, custom state hooks, MVC server structures, and secure cookie/header session controls.",
     badge: "Bootcamp",
     skills: ["React.js", "Node.js", "Express.js", "MongoDB", "OAuth"]
-  },
-  {
-    title: "Golden Batch Data Structures & Algorithms",
-    issuer: "Sheryians Coding School",
-    date: "2025",
-    credentialUrl: "https://drive.google.com/file/d/1IlNtBX3IIZF-oOcsNSYSvfFejmOQABDA/view?usp=drive_link",
-    description: "Excellence certification award for masterfully completing algorithmic challenges, tree/graph logic, complex arrays manipulation, and memory optimization paradigms.",
-    badge: "DSA Core",
-    skills: ["Java", "Data Structures", "Algorithms", "Optimization"]
   },
   {
     title: "Smart Agriculture Hackathon",
@@ -297,18 +298,18 @@ const CERTIFICATIONS_DATA = [
     issuer: "Tech Hackathon Group",
     date: "2025",
     credentialUrl: "https://drive.google.com/file/d/1cmjgR9gabgypLcWKFGM5FyhD7U5XFk5t/view?usp=drive_link",
-    description: "Designed a responsive music client fetching mood-tailored playlists using YouTube APIs, Tailwind alignments, and dynamic audio streams playback.",
+    description: "Designed a responsive emotion-aware music client fetching mood-tailored playlists using Face API, Tailwind alignments, and dynamic audio streams playback.",
     badge: "Hackathon 2",
-    skills: ["React.js", "YouTube API", "Tailwind CSS", "Audio Streams"]
+    skills: ["React.js", "Face API", "Tailwind CSS", "Cloudinary"]
   },
   {
     title: "Conversational AI ChatBot Hackathon",
     issuer: "AI Tech Challenge",
     date: "2025",
     credentialUrl: "https://drive.google.com/file/d/1I2mP_Mwt0HlSxmIDx_mYcCyfwOLhZV_5/view?usp=drive_link",
-    description: "Constructed NLP chatbot assistant leveraging advanced Gemini APIs, secure routing middleware, prompt structures, and conversational state tracking.",
+    description: "Constructed RAG chatbot assistant leveraging LangChain, vector embeddings, OpenRouter APIs, and Socket.io state tracking.",
     badge: "Hackathon 3",
-    skills: ["NLP", "Gemini API", "Node.js", "Express.js"]
+    skills: ["LangChain", "RAG", "Vector DB", "Socket.io"]
   }
 ];
 
@@ -317,7 +318,7 @@ function App() {
   const [activeCategory, setActiveCategory] = useState('languages');
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("baranwalaryan33@gmail.com");
+    navigator.clipboard.writeText("baranwalaryan22@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -338,9 +339,9 @@ function App() {
                 options={{
                   strings: [
                     'Full Stack Web Developer',
-                    'MERN Specialist',
-                    'Java Developer',
-                    'Open Source Contributor'
+                    'MERN & Java Developer',
+                    'Spring Boot Specialist',
+                    'AI & RAG Solutions Architect'
                   ],
                   autoStart: true,
                   loop: true,
@@ -363,11 +364,16 @@ function App() {
                 <span>GitHub</span>
               </a>
               
-              <a href="https://www.linkedin.com/in/aryan-baranwal-12a1b8301/" target="_blank" rel="noopener noreferrer" className="contact-btn">
+              <a href="https://linkedin.com/in/aryanbaranwal" target="_blank" rel="noopener noreferrer" className="contact-btn">
                 <svg className="svg-icon" viewBox="0 0 24 24" width="20" height="20">
                   <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
                 <span>LinkedIn</span>
+              </a>
+
+              <a href="https://leetcode.com/u/Aryan0x01" target="_blank" rel="noopener noreferrer" className="contact-btn">
+                <span className="btn-icon">⚡</span>
+                <span>LeetCode</span>
               </a>
 
               <a href="/FAANGPath_Simple_Template.pdf" download="Aryan_Baranwal_Resume.pdf" className="contact-btn download-btn">
@@ -523,8 +529,8 @@ function App() {
                     <span className="company-tag">IBM PBEL</span>
                   </div>
                   <ul className="exp-details">
-                    <li>Engineered a production-grade full-stack e-commerce web application using MERN stack with Razorpay payment gateway integration and 3+ microservices for modular scalability.</li>
-                    <li>Designed Redis caching, reducing average API response time by 40% and decreasing database query load by 60%.</li>
+                    <li>Engineered a full-stack e-commerce web application using MERN stack with Razorpay payment gateway integration and 3+ microservices for modular scalability.</li>
+                    <li>Designed Redis caching layer, reducing average API response time by 40% and decreasing database query load by 60%.</li>
                   </ul>
                 </div>
               </div>
@@ -532,13 +538,13 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content glass-card">
-                  <span className="timeline-date">Nov 2025 – Dec 2025</span>
+                  <span className="timeline-date">June 2026 – Jul 2026</span>
                   <div className="exp-header">
-                    <h3>Full Stack Development Intern</h3>
-                    <span className="company-tag">CodeTech IT Solutions</span>
+                    <h3>Full Stack Java Developer Intern</h3>
+                    <span className="company-tag">Grass Tech Technology</span>
                   </div>
                   <ul className="exp-details">
-                    <li>Architected and deployed 5+ React and Node.js modules used cross client projects, improving feature delivery timelines by 20%.</li>
+                    <li>Built 4 full-stack Java projects using Core Java, Servlet, JSP, JDBC, Spring Boot, and MySQL, implementing 10+ CRUD modules and MVC architecture following OOP principles.</li>
                   </ul>
                 </div>
               </div>
@@ -554,18 +560,55 @@ function App() {
             <div className="grid">
               <div className="project-card glass-card">
                 <div className="card-info">
-                  <span className="project-category">Backend System</span>
-                  <h3>Zorvyn-Assignment</h3>
-                  <p>Finance Data Processing & Access Control Backend built with MERN stack. Features secure JWT authentication and role-based access.</p>
+                  <span className="project-category">AI Voice & Systems</span>
+                  <h3>NOVA – AI Voice & Controller</h3>
+                  <p>Autonomous voice-controlled desktop assistant combining local rule engines with AI intent classification to execute 15+ Windows OS commands with sub-1s latency.</p>
                   <div className="project-tech">
-                    <span className="tech-tag">MERN Stack</span>
-                    <span className="tech-tag">JWT</span>
-                    <span className="tech-tag">Express.js</span>
-                    <span className="tech-tag">MongoDB</span>
+                    <span className="tech-tag">Node.js</span>
+                    <span className="tech-tag">WebSocket</span>
+                    <span className="tech-tag">OpenRouter API</span>
+                    <span className="tech-tag">Ollama</span>
                   </div>
                 </div>
                 <div className="card-actions">
-                  <a href="https://github.com/Aryan444Bits/Zorvyn-Assignment" target="_blank" rel="noopener noreferrer" className="btn-sm btn-git">GitHub</a>
+                  <a href="https://github.com/Aryan444Bits/Nova-Autonomous-Agent" target="_blank" rel="noopener noreferrer" className="btn-sm btn-git">GitHub</a>
+                </div>
+              </div>
+
+              <div className="project-card glass-card">
+                <div className="card-info">
+                  <span className="project-category">Conversational AI</span>
+                  <h3>AI Chat Bot (ChatGPT Clone)</h3>
+                  <p>Architected a RAG-powered conversational AI platform using LangChain, vector embeddings, and Socket.io, supporting 100+ concurrent users with real-time context.</p>
+                  <div className="project-tech">
+                    <span className="tech-tag">RAG & LangChain</span>
+                    <span className="tech-tag">Vector DB</span>
+                    <span className="tech-tag">Socket.io</span>
+                    <span className="tech-tag">React.js</span>
+                  </div>
+                </div>
+                <div className="card-actions">
+                  <a href="https://github.com/Aryan444Bits/AI-Chat-Bot" target="_blank" rel="noopener noreferrer" className="btn-sm btn-git">GitHub</a>
+                  <a href="https://ai-chat-bot-smrg.onrender.com" target="_blank" rel="noopener noreferrer" className="btn-sm btn-live">Live Demo</a>
+                </div>
+              </div>
+
+              <div className="project-card glass-card">
+                <div className="card-info">
+                  <span className="project-category">Web Multimedia</span>
+                  <h3>Moody Music Player</h3>
+                  <p>Emotion-aware music recommendation app using Face API, React, Tailwind CSS, Redis, and Cloudinary, achieving 82% emotion-detection accuracy.</p>
+                  <div className="project-tech">
+                    <span className="tech-tag">Face API</span>
+                    <span className="tech-tag">React.js</span>
+                    <span className="tech-tag">Tailwind CSS</span>
+                    <span className="tech-tag">Redis</span>
+                    <span className="tech-tag">Cloudinary</span>
+                  </div>
+                </div>
+                <div className="card-actions">
+                  <a href="https://github.com/Aryan444Bits/Moody-Music-Player-Full_Stack_Project-" target="_blank" rel="noopener noreferrer" className="btn-sm btn-git">GitHub</a>
+                  <a href="https://moody-music-aryan.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-sm btn-live">Live Demo</a>
                 </div>
               </div>
 
@@ -573,7 +616,7 @@ function App() {
                 <div className="card-info">
                   <span className="project-category">Artificial Intelligence</span>
                   <h3>Crop Advisory & Yield Prediction</h3>
-                  <p>AI-powered Agricultural Advice system built for hackathons to predict crop yield using machine learning.</p>
+                  <p>AI-powered Agricultural Advice system built for hackathons to predict crop yield using machine learning models.</p>
                   <div className="project-tech">
                     <span className="tech-tag">ML Models</span>
                     <span className="tech-tag">Flask</span>
@@ -591,7 +634,7 @@ function App() {
                 <div className="card-info">
                   <span className="project-category">Natural Language Processing</span>
                   <h3>Short-Term-Memory-ChatBot</h3>
-                  <p>AI assistant for student management, simplifying access to courses, timetables, and results.</p>
+                  <p>AI assistant for student management, simplifying access to courses, timetables, and academic results.</p>
                   <div className="project-tech">
                     <span className="tech-tag">NLP</span>
                     <span className="tech-tag">OpenAI API</span>
@@ -606,54 +649,18 @@ function App() {
 
               <div className="project-card glass-card">
                 <div className="card-info">
-                  <span className="project-category">Web Multimedia</span>
-                  <h3>Moody Music Player</h3>
-                  <p>Full-stack web application that plays music based on selected mood using YouTube Data API.</p>
-                  <div className="project-tech">
-                    <span className="tech-tag">React.js</span>
-                    <span className="tech-tag">YouTube API</span>
-                    <span className="tech-tag">Node.js</span>
-                    <span className="tech-tag">Tailwind</span>
-                  </div>
-                </div>
-                <div className="card-actions">
-                  <a href="https://github.com/Aryan444Bits/Moody-Music-Player-Full_Stack_Project-" target="_blank" rel="noopener noreferrer" className="btn-sm btn-git">GitHub</a>
-                  <a href="https://moody-music-aryan.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-sm btn-live">Live Demo</a>
-                </div>
-              </div>
-
-              <div className="project-card glass-card">
-                <div className="card-info">
-                  <span className="project-category">Developer Reference</span>
+                  <span className="project-category">Enterprise Java & Node</span>
                   <h3>Backend-Journey</h3>
-                  <p>A hands-on repository documenting deep learning in Node.js, Express, and REST APIs.</p>
+                  <p>A hands-on repository documenting deep learning in Core Java, Spring Boot, Node.js, Express, and REST APIs.</p>
                   <div className="project-tech">
+                    <span className="tech-tag">Java</span>
+                    <span className="tech-tag">Spring Boot</span>
                     <span className="tech-tag">REST APIs</span>
-                    <span className="tech-tag">Node.js</span>
                     <span className="tech-tag">MySQL</span>
-                    <span className="tech-tag">Security</span>
                   </div>
                 </div>
                 <div className="card-actions">
                   <a href="https://github.com/Aryan444Bits/Backend-Journey" target="_blank" rel="noopener noreferrer" className="btn-sm btn-git">GitHub</a>
-                </div>
-              </div>
-
-              <div className="project-card glass-card">
-                <div className="card-info">
-                  <span className="project-category">Conversational AI</span>
-                  <h3>AI-Chat-Bot</h3>
-                  <p>ChatGPT-clone built for learning conversational AI interactions and prompt engineering.</p>
-                  <div className="project-tech">
-                    <span className="tech-tag">React.js</span>
-                    <span className="tech-tag">Gemini API</span>
-                    <span className="tech-tag">CSS Grid</span>
-                    <span className="tech-tag">Node.js</span>
-                  </div>
-                </div>
-                <div className="card-actions">
-                  <a href="https://github.com/Aryan444Bits/AI-Chat-Bot" target="_blank" rel="noopener noreferrer" className="btn-sm btn-git">GitHub</a>
-                  <a href="https://ai-chat-bot-smrg.onrender.com" target="_blank" rel="noopener noreferrer" className="btn-sm btn-live">Live Demo</a>
                 </div>
               </div>
             </div>
@@ -743,6 +750,9 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* AI CHATBOT WIDGET */}
+      <AIChatBot />
     </div>
   );
 }

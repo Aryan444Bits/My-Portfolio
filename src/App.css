@@ -234,6 +234,19 @@ h2 {
   animation: floatCard 8s ease-in-out infinite alternate;
 }
 
+.hero-content.glass-card {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.hero-content.glass-card:hover {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -1230,6 +1243,19 @@ h2 {
   margin: 0 auto;
 }
 
+.content.central.glass-card {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.content.central.glass-card:hover {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
 .central h2 {
   margin-bottom: 1.5rem;
   background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%);
@@ -1286,12 +1312,13 @@ h2 {
 .portfolio-footer {
   position: relative;
   z-index: 2;
-  border-top: 1px solid var(--glass-border);
+  border-top: 1px solid transparent !important;
   padding: 3rem 2rem;
   margin-top: 4rem;
-  background: rgba(5, 5, 10, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
 }
 
 .footer-content {
