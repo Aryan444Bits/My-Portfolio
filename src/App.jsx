@@ -196,7 +196,7 @@ const CATEGORIES = [
     label: 'Languages',
     icon: (
       <svg viewBox="0 0 24 24" width="18" height="18" className="cat-icon">
-        <path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+        <path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
       </svg>
     )
   },
@@ -205,7 +205,7 @@ const CATEGORIES = [
     label: 'Frontend',
     icon: (
       <svg viewBox="0 0 24 24" width="18" height="18" className="cat-icon">
-        <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+        <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" />
       </svg>
     )
   },
@@ -214,7 +214,7 @@ const CATEGORIES = [
     label: 'Backend',
     icon: (
       <svg viewBox="0 0 24 24" width="18" height="18" className="cat-icon">
-        <path fill="currentColor" d="M19 15H5c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-3c0-1.1-.9-2-2-2zm0-12H5c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 6H5V5h14v4zm0 10H5v-4h14v4z"/>
+        <path fill="currentColor" d="M19 15H5c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-3c0-1.1-.9-2-2-2zm0-12H5c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 6H5V5h14v4zm0 10H5v-4h14v4z" />
       </svg>
     )
   },
@@ -223,7 +223,7 @@ const CATEGORIES = [
     label: 'Databases',
     icon: (
       <svg viewBox="0 0 24 24" width="18" height="18" className="cat-icon">
-        <path fill="currentColor" d="M12 2C6.48 2 2 4 2 6.5v11C2 20 6.48 22 12 22s10-2 10-4.5v-11C22 4 17.52 2 12 2zm0 2c4.82 0 8 1.51 8 2.5S16.82 9 12 9s-8-1.51-8-2.5S7.18 4 12 4zm8 13.5c0 .99-3.18 2.5-8 2.5s-8-1.51-8-2.5V13.7c1.86 1.08 4.75 1.8 8 1.8s6.14-.72 8-1.8v3.8zm0-5c0 .99-3.18 2.5-8 2.5s-8-1.51-8-2.5V8.7c1.86 1.08 4.75 1.8 8 1.8s6.14-.72 8-1.8v3.8z"/>
+        <path fill="currentColor" d="M12 2C6.48 2 2 4 2 6.5v11C2 20 6.48 22 12 22s10-2 10-4.5v-11C22 4 17.52 2 12 2zm0 2c4.82 0 8 1.51 8 2.5S16.82 9 12 9s-8-1.51-8-2.5S7.18 4 12 4zm8 13.5c0 .99-3.18 2.5-8 2.5s-8-1.51-8-2.5V13.7c1.86 1.08 4.75 1.8 8 1.8s6.14-.72 8-1.8v3.8zm0-5c0 .99-3.18 2.5-8 2.5s-8-1.51-8-2.5V8.7c1.86 1.08 4.75 1.8 8 1.8s6.14-.72 8-1.8v3.8z" />
       </svg>
     )
   },
@@ -232,7 +232,7 @@ const CATEGORIES = [
     label: 'Tools & DevOps',
     icon: (
       <svg viewBox="0 0 24 24" width="18" height="18" className="cat-icon">
-        <path fill="currentColor" d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.3C.5 6.7.9 9.8 2.9 11.8c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+        <path fill="currentColor" d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.3C.5 6.7.9 9.8 2.9 11.8c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
       </svg>
     )
   }
@@ -350,23 +350,23 @@ function App() {
                 }}
               />
             </div>
-            
+
             <div className="contact-bar">
               <button onClick={copyEmail} className="contact-btn email-btn">
                 <span className="btn-icon">📧</span>
                 <span className="btn-text">{copied ? 'Email Copied!' : 'Copy Email'}</span>
               </button>
-              
+
               <a href="https://github.com/aryan444bits" target="_blank" rel="noopener noreferrer" className="contact-btn">
                 <svg className="svg-icon" viewBox="0 0 24 24" width="20" height="20">
-                  <path fill="currentColor" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  <path fill="currentColor" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                 </svg>
                 <span>GitHub</span>
               </a>
-              
+
               <a href="https://linkedin.com/in/aryanbaranwal" target="_blank" rel="noopener noreferrer" className="contact-btn">
                 <svg className="svg-icon" viewBox="0 0 24 24" width="20" height="20">
-                  <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
                 <span>LinkedIn</span>
               </a>
@@ -424,7 +424,7 @@ function App() {
           <div className="content">
             <span className="label">// Technical Arsenal</span>
             <h2>Expertise</h2>
-            
+
             <div className="skills-console-container glass-card">
               {/* Console Header */}
               <div className="console-header">
@@ -480,8 +480,8 @@ function App() {
                         {/* Level Indicator: 5 blocks */}
                         <div className="skill-level-indicator">
                           {[1, 2, 3, 4, 5].map((block) => (
-                            <span 
-                              key={block} 
+                            <span
+                              key={block}
                               className={`level-block ${block <= skill.level ? 'active' : ''}`}
                               style={{ transitionDelay: `${index * 50 + block * 30}ms` }}
                             ></span>
@@ -489,7 +489,7 @@ function App() {
                         </div>
 
                         <p className="skill-desc">{skill.desc}</p>
-                        
+
                         <div className="skill-meta">
                           <div className="skill-meta-item">
                             <span className="meta-label">Applied in:</span>
@@ -499,7 +499,7 @@ function App() {
                               ))}
                             </div>
                           </div>
-                          
+
                           <div className="skill-tooltip">
                             <span className="tooltip-title">Practical Application</span>
                             <span className="tooltip-desc">{skill.details}</span>
@@ -681,7 +681,7 @@ function App() {
                   <div className="cert-card-header">
                     <div className="cert-icon-container">
                       <svg className="cert-svg-icon" viewBox="0 0 24 24" width="22" height="22">
-                        <path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                        <path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
                       </svg>
                     </div>
                     <div className="cert-meta-info">
@@ -699,12 +699,12 @@ function App() {
                         <span className="cert-skill-tag" key={skill}>{skill}</span>
                       ))}
                     </div>
-                    <a 
-                      href={cert.credentialUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={cert.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`cert-verify-link ${cert.credentialUrl === '#' ? 'placeholder-link' : ''}`}
-                      onClick={(e) => { if(cert.credentialUrl === '#') e.preventDefault(); }}
+                      onClick={(e) => { if (cert.credentialUrl === '#') e.preventDefault(); }}
                     >
                       Verify ↗
                     </a>
@@ -727,10 +727,10 @@ function App() {
               <button onClick={copyEmail} className="btn contact-action-btn">
                 <span>{copied ? '✓ Email Copied' : '📧 Copy Email Address'}</span>
               </button>
-              <a 
-                href="https://www.linkedin.com/in/aryan-baranwal-12a1b8301/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.linkedin.com/in/aryan-baranwal-12a1b8301/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn secondary contact-action-btn"
               >
                 <span>🔗 LinkedIn Profile</span>

@@ -1,16 +1,89 @@
-# React + Vite
+# Aryan Baranwal | Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Aryan Baranwal, a full stack developer focused on MERN applications, Java, Spring Boot, REST APIs, and AI-powered products.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Visit the deployed portfolio: [aryan44bits.netlify.app](https://aryan44bits.netlify.app/)
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The portfolio presents Aryan's technical experience, projects, certifications, education, and professional background through an interactive single-page experience. It also includes an AI portfolio assistant that helps visitors learn more about his skills and work.
 
-## Expanding the ESLint configuration
+## Highlights
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Interactive skills explorer covering languages, frontend, backend, databases, and developer tools
+- Three.js animated galaxy background with responsive rendering
+- GSAP-powered UI animations and transitions
+- AI portfolio assistant with conversational responses and fallback knowledge
+- Project, experience, certification, and education sections
+- Responsive layout for desktop and mobile devices
+- Resume and professional profile links
+
+## Tech Stack
+
+- React 19
+- Vite
+- Three.js
+- GSAP
+- JavaScript (ES6+)
+- HTML5 and CSS3
+- Typewriter Effect
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+Vite will provide a local URL in the terminal.
+
+### Production Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+Run the ESLint checks with:
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+src/
+├── components/       Reusable portfolio components
+├── assets/            Static project assets
+├── App.jsx            Main portfolio application
+├── App.css            Application styles
+└── index.css          Global styles
+```
+
+## Deployment
+
+The portfolio is deployed on Netlify and is available at [aryan44bits.netlify.app](https://aryan44bits.netlify.app/).
